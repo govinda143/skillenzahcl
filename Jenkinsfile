@@ -10,7 +10,7 @@ pipeline{
              steps{
                  script{
                  withSonarQubeEnv(credentialsId: 'sonarserver') {
-                     sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+                     sh 'mvn sonar:sonar'
                     }
                     timeout(time: 1, unit: 'HOURS') {
                     def qg = waitForQualityGate()
