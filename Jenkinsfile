@@ -3,7 +3,7 @@ pipeline{
   stages{
          stage('scm checkout'){
              steps{
-              git credentialsId: 'github', url: 'https://github.com/govinda143/sample-web-application.git'
+              git credentialsId: 'github', url: 'https://github.com/govinda143/skillenzahcl.git'
              }
          }
          stage('sonar qube'){
